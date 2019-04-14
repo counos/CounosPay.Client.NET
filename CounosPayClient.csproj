@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.1.0</Version>
+    <Company>Counos.io</Company>
+    <Description>This SDK let you talk with the CounosPay API</Description>
+    <AssemblyName>CounosPayClient</AssemblyName>
+    <RootNamespace>CounosPayClient</RootNamespace>
+    <Authors>CounosPayClient - Ram</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logger\**" />
+    <Compile Remove="_ReSharper.Caches\**" />
+    <EmbeddedResource Remove="Logger\**" />
+    <EmbeddedResource Remove="_ReSharper.Caches\**" />
+    <None Remove="Logger\**" />
+    <None Remove="_ReSharper.Caches\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JWT" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\CounosPay.NET\dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
